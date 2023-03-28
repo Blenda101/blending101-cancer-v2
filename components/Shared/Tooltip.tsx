@@ -22,7 +22,6 @@ const Tooltip = (props: TooltipProps) => {
     filters?.disease[gender] &&
     appliedFilters.push(filters?.disease[gender]);
   filters?.race && appliedFilters.push(filters?.race);
-  filters?.age && appliedFilters.push(filters?.age);
 
   return (
     <div id="tooltip" className={styles.tooltip}>
@@ -60,7 +59,6 @@ export const WaffleTooltip = (props: CancerTypeTooltipProps) => {
   let appliedFilters: string[] = [];
   filters?.year && appliedFilters.push(filters?.year);
   filters?.race && appliedFilters.push(filters?.race);
-  filters?.age && appliedFilters.push(filters?.age);
   filters?.state && appliedFilters.push(filters?.state);
 
   return (
@@ -89,7 +87,6 @@ export const CancerTypeTooltip = (props: CancerTypeTooltipProps) => {
   let appliedFilters: string[] = [];
   filters?.year && appliedFilters.push(filters?.year);
   filters?.race && appliedFilters.push(filters?.race);
-  filters?.age && appliedFilters.push(filters?.age);
   filters?.state && appliedFilters.push(filters?.state);
 
   return (
