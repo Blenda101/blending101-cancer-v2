@@ -1,0 +1,52 @@
+// COLORS
+
+// $color_1
+$color_black: #000000;
+// $color_2
+$color_gray: #969696;
+// $color_5
+$color_white: #ffffff;
+// $color_6
+$color_light_black: #424242;
+// $color_7
+$color_light_blue: #efeff2;
+// $color_8
+$color_light_red: #d3d3d3;
+// $font-family_1
+$font_familt_circe: "Circe";
+// $font-family_2
+$font_familt_sunset: "Sunset-Serial";
+// $background-color_1
+$color_light_gray: #e2e2e2;
+// $background-color_2
+$color_light_green: #e1ffc1;
+// $background-color_3
+$color_orange: #fe5717;
+// $background-color_4
+$color_green: #7cbc39;
+
+$border_green: 1px solid $color_green;
+
+$border_orange: 1px solid $color_orange;
+
+:root {
+  --primary: #7bba38;
+  --secondary: #fe5717;
+  --dropdown-active: #eef8df;
+  --dropdown-inactive: #ffe0d4;
+  --rgb-female: 254, 87, 23;
+  --rgb-male: 124, 188, 57;
+
+  --body: #fff;
+  --header: #fff;
+
+  --bg-summary: #f6f6f6;
+  --bg-item: #efeaea;
+
+  --shadow-summary: none;
+  --shadow-gender: none;
+  --shadow-composition: none;
+  --shadow-graph: none;
+  --shadow-figure: none;
+  --shadow-state-range: none;
+}

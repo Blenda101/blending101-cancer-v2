@@ -1,0 +1,49 @@
+.rate {
+  position: relative;
+  box-shadow: var(--shadow-gender);
+  svg {
+    width: 230px;
+
+    @include respond(550px) {
+      width: 200px;
+    }
+    @include respond(495px) {
+      width: 180px;
+    }
+    @include respond(450px) {
+      width: 150px;
+    }
+    @include respond(340px) {
+      width: 125px;
+    }
+  }
+  &__label {
+    fill: black;
+    font-weight: 400;
+    font-size: 48px;
+    opacity: 0.6;
+    text-anchor: middle;
+  }
+  &__population {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+  }
+}
+
+.demographic {
+  @include respond(1400px) {
+    padding-top: 10px;
+  }
+  @include respond(1300px) {
+    padding-top: 15px;
+  }
+  @include respond(1200px) {
+    padding-top: 55px;
+  }
+  @include respond(992px) {
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+}

@@ -1,0 +1,205 @@
+// ==========secoend_sec start=============
+
+.box_gray {
+  margin-top: -14rem;
+  background: var(--bg-summary);
+  box-shadow: var(--shadow-summary);
+  border-radius: 2.5rem;
+  padding: 4.375rem 3.125rem 2rem;
+
+  @include respond(big-desktop) {
+    //1400px
+    padding: 4rem 3rem 1.8rem;
+  }
+  @include respond(phone) {
+    //768px
+    margin-top: -7rem;
+    padding: 3rem 1.6rem 1.8rem;
+  }
+  @include respond(phone-sm) {
+    //576px
+    border-radius: 1rem;
+  }
+}
+
+.secoend_sec {
+  position: relative;
+  z-index: 3;
+}
+
+// ==========secoend_sec end=============
+
+// ======= Deaths sec start========
+.death_sec.Incidence {
+  .drop-shadow {
+    background: #ffffff;
+    overflow: hidden;
+  }
+}
+.death_sec.Death {
+  .drop-shadow {
+    filter: var(--shadow-item);
+  }
+}
+.death_sec {
+  .progress {
+    width: 70%;
+    @include respond(tab-port) {
+      //992px
+      width: 90%;
+    }
+  }
+  .drop-shadow {
+    svg {
+      height: 53px;
+    }
+  }
+  .border_hover {
+    transition: 0.3s;
+    padding: 8px 20px 8px 20px;
+    border: 1px solid transparent;
+  }
+  .border_hover_outer {
+    cursor: pointer;
+    &:hover {
+      .border_hover {
+        border: 1px solid $color_orange;
+        border-radius: 50rem;
+        box-shadow: 7.43046px 7.43046px 18.5761px rgba(174, 174, 192, 0.4),
+          -7.43046px -7.43046px 14.8609px #ffffff,
+          -7.43046px -7.43046px 14.8609px #ffffff,
+          7.43046px 7.43046px 18.5761px rgba(174, 174, 192, 0.4);
+      }
+      .hover_green {
+        border: 1px solid $color_green;
+      }
+      .progress_no {
+        opacity: 1;
+        margin-right: 15px;
+      }
+    }
+  }
+  .orange_death .progress_no {
+    margin-right: 0.5rem;
+  }
+  .orange_death .progress {
+    @include respond(tab-land) {
+      //1200px
+      width: 72%;
+      justify-content: start !important;
+    }
+  }
+  .active {
+    .progress_no {
+      opacity: 1;
+    }
+    &.Male .border_hover {
+      border: 1px solid $color_green;
+    }
+    &.Female .border_hover {
+      border: 1px solid $color_orange;
+    }
+    .border_hover {
+      border-radius: 50rem;
+      box-shadow: 7.43046px 7.43046px 18.5761px rgba(174, 174, 192, 0.4),
+        -7.43046px -7.43046px 14.8609px #ffffff,
+        -7.43046px -7.43046px 14.8609px #ffffff,
+        7.43046px 7.43046px 18.5761px rgba(174, 174, 192, 0.4);
+    }
+    .hover_green {
+      border: 1px solid $color_green;
+    }
+  }
+  .hover_green {
+    border: 1px solid transparent;
+  }
+}
+
+// ======= Deaths sec end========
+
+// ======= Race sec start========
+
+.race_sec {
+  .counter_btn:hover {
+    border: 0.063rem solid $color_orange;
+  }
+  .counter_btn--active {
+    border: 0.063rem solid $color_orange;
+    filter: drop-shadow(0px 1px 2px rgba(254, 87, 23, 0.23));
+  }
+  .counter_btn--active.Incidence {
+    background-color: #ffffff;
+  }
+}
+
+.visible-none {
+  opacity: 0;
+  @include respond(tab-land) {
+    //1200px
+    display: none;
+  }
+}
+
+// ======= Race sec end========
+
+// ======= Age sec start========
+
+.age_sec .counter_btn:hover {
+  border: 0.063rem solid $color_green;
+}
+.age_sec .counter_btn--active {
+  border: 0.063rem solid $color_green;
+  filter: drop-shadow(0px 1px 2px rgba(124, 188, 57, 0.23));
+}
+.age_sec .counter_btn--active.Incidence {
+  background-color: #ffffff;
+}
+// ======= Age sec end========
+
+#filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  @include respond(600px) {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  @include respond(991px) {
+    justify-content: unset;
+    & > div {
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  & > div {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.woman_btn {
+  justify-content: flex-end;
+  padding-right: 20px;
+  & > span {
+    display: none;
+  }
+}
+
+.woman_btn {
+  justify-content: flex-end;
+  padding-right: 30px;
+  & > span {
+    display: none;
+  }
+}
+
+.man_btn {
+  justify-content: flex-start;
+  padding-left: 30px;
+  & > span {
+    display: none;
+  }
+}

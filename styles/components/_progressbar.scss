@@ -1,0 +1,19 @@
+.progress {
+	--bs-progress-bg: #E9E7E7 !important;
+	box-shadow: inset -0.743046px -0.743046px 0.743046px rgba(255, 255, 255, 0.7), inset 0.743046px 0.743046px 1.48609px rgba(174, 174, 192, 0.2);
+	border-radius: 40px;
+	border: 1px solid #FFFFFF;
+	filter: drop-shadow(-0.743046px -0.743046px 2.22914px #FFFFFF) drop-shadow(1.11457px 1.11457px 2.22914px rgba(174, 174, 192, 0.4));
+	border-radius: 40px;
+	border-radius: 50rem !important;
+	height: 1.5rem !important;
+	padding: 0.2rem;
+	.bg-success {
+		background-color: $color_green !important;
+		border-radius: 50rem;
+	}
+	.bg-danger {
+		background-color: $color_orange !important;
+		border-radius: 50rem;
+	}
+}

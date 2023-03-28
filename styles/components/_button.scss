@@ -1,0 +1,175 @@
+.counter_btn {
+  background: var(--bg-item);
+  border: 0.063rem solid transparent;
+  box-shadow: var(--shadow-gender);
+  border-radius: 2.5rem;
+  font-family: $font_familt_circe;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+  color: $color_black;
+  padding: 0.7rem 1.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  gap: 0.6rem;
+  text-decoration: none;
+  width: 80%;
+  cursor: pointer;
+  @include respond(big-desktop) {
+    font-size: 1rem;
+    padding: 0.6rem 1.9rem;
+    width: auto;
+  }
+  @include respond(tab-land) {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+  @include respond(600px) {
+    padding: 0.3rem 0.8rem;
+    font-size: 14px;
+  }
+  &:hover {
+    border-color: $color_orange;
+    color: $color_black;
+  }
+  img {
+    width: auto;
+    height: 1.5rem;
+    @include respond(tab-port) {
+      width: auto;
+      height: 1.4rem;
+    }
+  }
+}
+
+.dropdown_button {
+  border-radius: 2.5rem;
+  font-family: $font_familt_circe;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+  color: $color_black;
+  padding: 0.7rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // margin: auto;
+  gap: 0.3rem;
+  @include respond(600px) {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+  }
+
+  @include respond(500px) {
+    padding: 0.3rem 0.6rem;
+    font-size: 12px;
+    gap: 0.1rem;
+  }
+  @include respond(350px) {
+    padding: 0.2rem 0.5rem;
+  }
+
+  img {
+    padding-right: 0.8rem;
+    height: 1.4rem;
+    @include respond(500px) {
+      padding-right: 0.2rem;
+      height: 1rem;
+    }
+    @include respond(350px) {
+      height: 0.8rem;
+    }
+  }
+}
+
+.dropdown_button.Incidence {
+  background: #ffffff;
+  border: 1px solid #d3d3d3;
+}
+
+.dropdown_button.Death {
+  background: $color_light_blue;
+  border: 1px solid $color_light_blue;
+  box-shadow: 7.43046px 7.43046px 18.5761px rgba(174, 174, 192, 0.4),
+    -7.43046px -7.43046px 14.8609px #ffffff,
+    -7.43046px -7.43046px 14.8609px #ffffff,
+    7.43046px 7.43046px 18.5761px rgba(174, 174, 192, 0.4);
+}
+
+.Incidence.orange_btn {
+  filter: drop-shadow(0px 2px 5px rgba(254, 87, 23, 0.23));
+}
+.Incidence.green_btn {
+  filter: drop-shadow(0px 2px 5px #84ff203b);
+}
+.orange_btn {
+  border: $border_orange !important;
+}
+.green_btn {
+  border: $border_green !important;
+}
+
+// =========weomen and men button=========
+
+.filter_btn {
+  background: $color_orange;
+  border: 1px solid $color_orange;
+  box-shadow: var(--shadow-gender);
+  border-radius: 2.5rem;
+  padding: 1rem 2.5rem;
+  font-family: $font_familt_circe;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: $color_white;
+  text-decoration: none;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  @include respond(phone-sm) {
+    //575px
+    font-size: 1rem;
+  }
+  @include respond(phone-xs) {
+    width: 90%;
+    font-size: 1rem;
+  }
+  @include respond(768px) {
+    padding: 15px 5px;
+    width: 50%;
+  }
+  @include respond(600px) {
+    width: 60%;
+  }
+  // @include respond(450px) {
+  //   width: 80%;
+  // }
+  &:hover {
+    color: $color_white;
+  }
+  .img-fluid {
+    position: relative;
+    top: -1px;
+    left: -0.313rem;
+
+    @include respond(phone-sm) {
+      //575px
+      width: 1rem;
+    }
+  }
+}
+
+.men_btn {
+  background: $color_green;
+  border: $border_green;
+}
+
+// =========weomen and men button end=========

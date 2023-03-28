@@ -1,0 +1,69 @@
+.graph-row {
+  margin-bottom: 20px;
+}
+.graph {
+  filter: var(--shadow-graph);
+  padding-right: 1px;
+  &__wrapper {
+    margin-top: 2rem;
+  }
+  &__box {
+    background: var(--bg-summary);
+    border-radius: 20px;
+    overflow: hidden;
+    &--female {
+      border: 1px solid #fe5717;
+    }
+    &--male {
+      border: 1px solid #7cbc39;
+    }
+  }
+  &__tooltip {
+    background-color: #000;
+    border: 1px solid #333;
+    border-radius: 10px;
+    min-width: 150px;
+    outline: none;
+    &:hover {
+      border: none;
+    }
+    p {
+      font-size: 16px;
+      text-align: center;
+      padding: 10px 20px;
+      background-color: #333;
+      overflow: hidden;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      font-weight: 600;
+      color: #fff;
+      margin: 0;
+    }
+    span {
+      display: block;
+      color: #ededed;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 2px;
+    }
+    h6 {
+      font-weight: 600;
+      font-family: "Circe";
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      margin: 0;
+      padding: 15px;
+      font-size: 20px;
+    }
+  }
+}
+
+.value__male {
+  color: var(--primary) !important;
+}
+.value__female {
+  color: var(--secondary) !important;
+}

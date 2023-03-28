@@ -1,0 +1,218 @@
+.banner_sec {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #dffdbf 75.11%,
+    var(--header) 100%
+  );
+  position: relative;
+  z-index: 2;
+  .btn_bg {
+    background: $color_light_blue;
+    border-radius: 50rem;
+    display: inline-flex !important;
+    padding: 1rem;
+    @include respond(400px) {
+      padding: 0.7rem;
+    }
+
+    .tab-btn {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 0.438rem;
+      background: #fff;
+      border-radius: 3.125rem;
+      padding: 0.2rem 1.25rem;
+      background: $color_light_blue;
+      border: 1px solid #e8e8e8;
+      box-shadow: 0.464rem 0.464rem 1.161rem rgba(174, 174, 192, 0.4),
+        -0.464rem -0.464rem 0.929rem #ffffff,
+        -7.43046px -7.43046px 14.8609px #ffffff,
+        7.43046px 7.43046px 18.5761px rgba(174, 174, 192, 0.4);
+      border-radius: 2.661rem;
+      font-family: $font_familt_circe;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.5rem;
+      transition: 0.3s;
+      text-align: center;
+      letter-spacing: -0.03em;
+      @include respond(phone-sm) {
+        //576px
+        font-size: 1.2rem;
+      }
+      @include respond(400px) {
+        padding: 0.2rem 0.8rem;
+      }
+      // &:hover {
+      //   border: 0.063rem solid $color_orange !important;
+      // }
+      img {
+        @include respond(phone-sm) {
+          //576px
+          width: 1.2rem;
+        }
+      }
+      // &:hover span {
+      //   color: $color_orange !important;
+      // }
+      // &:hover path {
+      //   fill: $color_orange;
+      // }
+      span {
+        color: $color_gray;
+        position: relative;
+        top: 0.063rem;
+      }
+    }
+    .tab-btn.active {
+      border: 0.063rem solid $color_orange;
+      span {
+        color: $color_orange;
+      }
+    }
+  }
+
+  .btn_bg_incidence {
+    background: var(--secondary);
+    border-radius: 50rem;
+    display: inline-flex !important;
+    padding: 1rem;
+    @include respond(400px) {
+      padding: 0.7rem;
+    }
+    .tab-btn {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 0.438rem;
+      border-radius: 3.125rem;
+      padding: 0.2rem 1.25rem;
+      // background: $color_light_blue;
+      // border: 1px solid #e8e8e8;
+      border-radius: 2.661rem;
+      font-family: $font_familt_circe;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.5rem;
+      transition: 0.3s;
+      text-align: center;
+      letter-spacing: -0.03em;
+      @include respond(phone-sm) {
+        //576px
+        font-size: 1.2rem;
+      }
+      @include respond(400px) {
+        padding: 0.2rem 0.8rem;
+      }
+      // &:hover {
+      //   background: #fff;
+      // }
+      img {
+        @include respond(phone-sm) {
+          //576px
+          width: 1.2rem;
+        }
+      }
+      // &:hover span {
+      //   color: $color_orange !important;
+      // }
+      // &:hover path {
+      //   fill: $color_orange;
+      // }
+      span {
+        color: white;
+        position: relative;
+        top: 0.063rem;
+      }
+    }
+    .tab-btn.active {
+      border: 0.063rem solid $color_orange;
+      background: #fff;
+      span {
+        color: $color_orange;
+      }
+    }
+  }
+
+  .page-header {
+    font-family: $font_familt_sunset;
+    font-weight: 700;
+    font-size: 5.938rem;
+    line-height: 1;
+    color: $color_orange;
+
+    @include respond(big-desktop) {
+      //1400px
+      font-size: 5rem;
+    }
+    @include respond(tab-land) {
+      //1200px
+      font-size: 4rem;
+    }
+    @include respond(phone) {
+      //768px
+      font-size: 3.3rem;
+    }
+    @include respond(phone-sm) {
+      //576px
+      font-size: 2.6rem;
+    }
+    @include respond(phone-xs) {
+      //410px
+      font-size: 2.3rem;
+    }
+    span {
+      color: $color_green;
+    }
+  }
+  .banner_img {
+    padding-top: 5rem;
+    @include respond(phone) {
+      //768px
+      padding-top: 2rem;
+    }
+  }
+  .green_virus {
+    position: absolute;
+    bottom: 44%;
+    right: 0;
+    z-index: -1;
+    @include respond(tab-land) {
+      //1200px
+      width: 14rem;
+    }
+    @include respond(phone) {
+      //768px
+      display: none;
+    }
+  }
+  .red_virus {
+    position: absolute;
+    bottom: 35%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+    @include respond(tab-land) {
+      //1200px
+      width: 18rem;
+    }
+    @include respond(phone) {
+      //768px
+      display: none;
+    }
+  }
+  .banner_white_shape {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+    width: 90%;
+    @include respond(phone) {
+      //768px
+      bottom: 2rem;
+    }
+  }
+}
