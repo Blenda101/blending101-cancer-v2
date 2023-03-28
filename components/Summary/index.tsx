@@ -201,15 +201,6 @@ const Summary = () => {
                   onOpen={() => dropdownHandler("state")}
                   onChange={(value) => filterSelector(value, "state")}
                 />
-                <Filter
-                  type="age"
-                  show={showDropdown === "age"}
-                  active={filters[category].age}
-                  className={getFilterClass("green_btn")}
-                  items={AGE}
-                  onOpen={() => dropdownHandler("age")}
-                  onChange={(value) => filterSelector(value, "age")}
-                />
                 {!isSwipeEnable && (
                   <Filter
                     type="disease"

@@ -109,7 +109,6 @@ const CustomTooltip = (props: any) => {
     let appliedFilters: string[] = [];
     filters?.disease[gender] && appliedFilters.push(filters?.disease[gender]);
     filters?.race && appliedFilters.push(filters?.race);
-    filters?.age && appliedFilters.push(filters?.age);
     filters?.state && appliedFilters.push(filters?.state);
     return (
       <div className="graph__tooltip">

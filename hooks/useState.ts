@@ -10,7 +10,6 @@ const useStates = () => {
   const { data } = useQuery(GET_STATE_DATA, {
     variables: {
       dataSet: category,
-      age: filters.age,
       race: filters.race,
       maleDisease: filters.disease.Male,
       femaleDisease: filters.disease.Female,
@@ -19,10 +18,10 @@ const useStates = () => {
   });
 
   const state = useMemo(() => {
-    if (!data?.getStateDataForCancer) return;
+    if (!data?.getStateDataForAllCancer) return;
     return {
-      male: JSON.parse(data.getStateDataForCancer.maleData),
-      female: JSON.parse(data.getStateDataForCancer.femaleData),
+      male: JSON.parse(data.getStateDataForAllCancer.maleData),
+      female: JSON.parse(data.getStateDataForAllCancer.femaleData),
     };
   }, [data]);
 

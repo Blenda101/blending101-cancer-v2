@@ -12,7 +12,6 @@ const useCancerPerYear = () => {
       race: filters.race,
       maleDisease: filters.disease.Male,
       femaleDisease: filters.disease.Female,
-      age: filters.age,
       state: filters.state,
     },
   });

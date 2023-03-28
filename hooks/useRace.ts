@@ -11,7 +11,6 @@ const useRace = () => {
   const { data } = useQuery(GET_RACE_DATA, {
     variables: {
       dataSet: category,
-      age: filters.age,
       race: filters.race,
       maleDisease: filters.disease.Male,
       femaleDisease: filters.disease.Female,
@@ -23,7 +22,7 @@ const useRace = () => {
   const race = useMemo(() => {
     const raceData = { male: {}, female: {} };
     Object.keys(RACE).forEach((race) => {
-      const values = data?.getRaceData;
+      const values = data?.getAllCancerRaceData;
       const female = values?.femaleData?.find((value) => value.type === race);
       const male = values?.maleData?.find((value) => value.type === race);
       raceData.male[race] = {

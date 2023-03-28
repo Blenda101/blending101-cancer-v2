@@ -8,7 +8,6 @@ export interface TypeState {
     Male: string;
     Female: string;
   };
-  age: string;
   race: string;
   state: string;
   year: string;
@@ -25,7 +24,6 @@ const InitialState: CategoryState = {
       Male: "Bladder",
       Female: "Breast",
     },
-    age: "",
     race: "",
     state: "",
     year: "2018",
@@ -35,7 +33,6 @@ const InitialState: CategoryState = {
       Male: "Bladder",
       Female: "Brain",
     },
-    age: "",
     race: "",
     state: "",
     year: "2018",

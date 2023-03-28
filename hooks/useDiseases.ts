@@ -25,7 +25,6 @@ const useDiseases = () => {
   const { data } = useQuery(GET_DISEASES, {
     variables: {
       dataSet: category,
-      age: filters.age,
       race: filters.race,
       year: filters.year,
       state: filters.state,

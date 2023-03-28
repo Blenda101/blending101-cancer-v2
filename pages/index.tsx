@@ -1,4 +1,3 @@
-import Age from "@/components/Age";
 import Cancer from "@/components/Cancer";
 import Race from "@/components/Race";
 import State from "@/components/State";
@@ -18,7 +17,6 @@ function Home() {
       <Cancer diseases={types as any} />
       <Rate diseases={rates as any} />
       <Race />
-      <Age />
       <State />
     </main>
   );
