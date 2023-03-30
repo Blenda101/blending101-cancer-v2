@@ -63,7 +63,7 @@ const Filter = (props: FilterProps) => {
         )}
       </button>
       <ul className={`dropdown-menu ${show ? "show" : ""}`}>
-        {type !== "disease" && (
+        {(type === "disease" || type === "race") && (
           <li onClick={() => onChange("")}>
             <a className="dropdown-item">
               <img
@@ -97,7 +97,7 @@ export default Filter;
 
 const DEFAULT_DROPDOWN = {
   disease: {
-    title: "All Diseases",
+    title: "All Cancers",
     icon: "/img/disease.svg",
   },
   race: {

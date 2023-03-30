@@ -216,3 +216,12 @@
     }
   }
 }
+
+#Incidence-Title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  & + img {
+    margin-top: 20px;
+  }
+}

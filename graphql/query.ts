@@ -118,7 +118,6 @@ export const GET_FILTERS = gql`
           Male
           Female
         }
-        age
         race
         state
       }
@@ -127,7 +126,6 @@ export const GET_FILTERS = gql`
           Male
           Female
         }
-        age
         race
         state
       }

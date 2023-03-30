@@ -10,7 +10,6 @@ import useDiseases from "@/hooks/useDiseases";
 function Home() {
   const { data: filter } = useQuery(GET_FILTERS);
   const { types, rates } = useDiseases();
-  console.log(types);
   return (
     <main>
       <Summary />

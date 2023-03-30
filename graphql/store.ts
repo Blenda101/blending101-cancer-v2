@@ -21,8 +21,8 @@ export interface CategoryState {
 const InitialState: CategoryState = {
   Incidence: {
     disease: {
-      Male: "Bladder",
-      Female: "Breast",
+      Male: "",
+      Female: "",
     },
     race: "",
     state: "",
@@ -30,8 +30,8 @@ const InitialState: CategoryState = {
   },
   Death: {
     disease: {
-      Male: "Bladder",
-      Female: "Brain",
+      Male: "",
+      Female: "",
     },
     race: "",
     state: "",

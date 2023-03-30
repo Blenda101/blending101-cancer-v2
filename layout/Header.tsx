@@ -57,7 +57,7 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <h1 className="page-header">
+              <h1 id={`${category}-Title`} className="page-header">
                 Cancer Interactive <br />
                 <span>Data Story</span>
               </h1>
