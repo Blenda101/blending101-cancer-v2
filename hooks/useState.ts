@@ -10,9 +10,9 @@ const useStates = () => {
   const { data } = useQuery(GET_STATE_DATA, {
     variables: {
       dataSet: category,
-      race: filters.race,
-      maleDisease: filters.disease.Male,
-      femaleDisease: filters.disease.Female,
+      race: filters.race || "All Races",
+      maleDisease: filters.disease.Male || "All Cancers",
+      femaleDisease: filters.disease.Female || "All Cancers",
       year: filters.year,
     },
   });

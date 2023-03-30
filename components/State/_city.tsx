@@ -20,8 +20,6 @@ const City = (props: StateProps) => {
   const type = useCategory();
   const filters = filtersVar();
 
-  console.log("first");
-
   const stateRef = useRef<SVGGElement>(null);
   const [color, textColor] = useMemo(() => {
     const value = maps ? (maps as any)[id]?.quartile : 0;

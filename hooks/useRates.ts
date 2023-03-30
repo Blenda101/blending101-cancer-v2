@@ -6,7 +6,7 @@ import { filtersVar } from "@/graphql/store";
 const useRates = () => {
   const category = useCategory();
   const { rates } = useDiseases();
-
+  console.log(rates);
   const filters = filtersVar();
 
   const rate = useMemo(() => {

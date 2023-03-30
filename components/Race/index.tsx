@@ -20,7 +20,7 @@ const Race = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <Title title="Race" subtitle={category} />
+            <Title title="Race" subtitle={`${category} Rate`} />
             <div className="shadow_box">
               {isSwipeEnable ? (
                 <MobileRace race={race} />

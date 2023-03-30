@@ -30,6 +30,7 @@ type IDropdownType =
 
 const Summary = () => {
   const rates = useRates();
+  console.log(rates);
   const gender = useGender();
   const category = useCategory();
   const isSwipeEnable = useSwipeStatus();
@@ -178,7 +179,7 @@ const Summary = () => {
                   type="race"
                   show={showDropdown === "race"}
                   active={filters[category].race}
-                  className={getFilterClass("orange_btn")}
+                  className={getFilterClass("")}
                   items={RACE}
                   onOpen={() => dropdownHandler("race")}
                   onChange={(value) => filterSelector(value, "race")}
@@ -187,7 +188,7 @@ const Summary = () => {
                   type="year"
                   show={showDropdown === "year"}
                   active={filters[category].year}
-                  className={getFilterClass("orange_btn")}
+                  className={getFilterClass("")}
                   items={YEAR_DICTIONARY}
                   onOpen={() => dropdownHandler("year")}
                   onChange={(value) => filterSelector(value, "year")}
@@ -196,7 +197,7 @@ const Summary = () => {
                   type="state"
                   show={showDropdown === "state"}
                   active={filters[category].state}
-                  className={getFilterClass("green_btn")}
+                  className={getFilterClass("")}
                   items={STATE_DICTIONARIES}
                   onOpen={() => dropdownHandler("state")}
                   onChange={(value) => filterSelector(value, "state")}
@@ -204,9 +205,10 @@ const Summary = () => {
                 {!isSwipeEnable && (
                   <Filter
                     type="disease"
+                    items={MALE_DISEASE}
+                    className={getFilterClass("green_btn")}
                     show={showDropdown === "mdisease"}
                     active={filters[category].disease.Male}
-                    items={MALE_DISEASE}
                     onOpen={() => dropdownHandler("mdisease")}
                     onChange={(value) => filterSelector(value, "mdisease")}
                   />

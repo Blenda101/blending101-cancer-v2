@@ -9,9 +9,9 @@ const useCancerPerYear = () => {
   const { data } = useQuery(GET_YEARWISE_CANCER, {
     variables: {
       dataSet: category,
-      race: filters.race,
-      maleDisease: filters.disease.Male,
-      femaleDisease: filters.disease.Female,
+      race: filters.race || "All Races",
+      maleDisease: filters.disease.Male || "All Cancers",
+      femaleDisease: filters.disease.Female || "All Cancers",
       state: filters.state,
     },
   });

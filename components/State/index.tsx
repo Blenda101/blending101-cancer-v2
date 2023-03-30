@@ -16,7 +16,7 @@ const State = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <Title title="Location" subtitle={category} />
+            <Title title="Location" subtitle={`${category} Rate`} />
             <div className="shadow_box">
               <SwipeWrapper>
                 <SwiperSlide>

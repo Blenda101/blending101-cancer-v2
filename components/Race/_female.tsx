@@ -15,7 +15,6 @@ const FemaleRace = (props: FemaleRaceProps) => {
   return (
     <div className="row">
       <div className="col-lg-12 col-12">
-        <h4 className="box_inner_title text-lg-end">Rate</h4>
         <div className="mb-4">
           <Progress
             caption="White"
