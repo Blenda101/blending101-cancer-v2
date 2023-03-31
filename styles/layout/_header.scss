@@ -144,14 +144,17 @@
     font-size: 5.938rem;
     line-height: 1;
     color: $color_orange;
-
-    @include respond(big-desktop) {
-      //1400px
+    @include respond(1700px) {
       font-size: 5rem;
     }
-    @include respond(tab-land) {
-      //1200px
+    @include respond(1450px) {
+      font-size: 4.5rem;
+    }
+    @include respond(1280px) {
       font-size: 4rem;
+    }
+    @include respond(10700px) {
+      font-size: 3.5rem;
     }
     @include respond(phone) {
       //768px
@@ -161,9 +164,9 @@
       //576px
       font-size: 2.6rem;
     }
-    @include respond(phone-xs) {
+    @include respond(450px) {
       //410px
-      font-size: 2.3rem;
+      font-size: 2rem;
     }
     span {
       color: $color_green;
@@ -224,4 +227,27 @@
   & + img {
     margin-top: 20px;
   }
+}
+
+img.img-fluid.banner_img.Incidence {
+  padding-top: 0;
+  padding-bottom: 8rem;
+  @include respond(992px) {
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+  }
+
+  @include respond(768px) {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+  }
+  @include respond(560px) {
+    padding-top: 3.5rem;
+  }
+  @include respond(450px) {
+    padding-top: 5rem;
+  }
+}
+img.img-fluid.banner_img.Death {
+  padding-top: 5rem;
 }

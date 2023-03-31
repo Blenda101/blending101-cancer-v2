@@ -1,23 +1,31 @@
 import { useCategory, useFilters } from "@/context/CategoryProvider";
 import { useSwipeStatus } from "@/context/SwiperProvider";
 import { filtersVar, IGender } from "@/graphql/store";
-import React, { Fragment } from "react";
+import React, { Fragment, useMemo } from "react";
 import Tippy from "@tippyjs/react";
 import styles from "./index.module.scss";
 import { CancerTypeTooltip } from "../Shared/Tooltip";
 
 interface ProgressProps {
   value: number;
+  maxValue: number;
   align: "left" | "right";
   gender: IGender;
   label: string;
   population: string;
 }
 const ProgressRate = (props: ProgressProps) => {
-  const { value, align, gender, label, population } = props;
+  const { value, align, gender, label, population, maxValue } = props;
   const filter = filtersVar();
   const category = useCategory();
   const isSwipeEnable = useSwipeStatus();
+
+  const progress = useMemo(() => {
+    return (100 * value) / maxValue;
+  }, [maxValue, value]);
+
+  console.log(progress);
+
   const onDiseaseSelect = () => {
     filtersVar({
       ...filter,
@@ -59,8 +67,8 @@ const ProgressRate = (props: ProgressProps) => {
                 <span
                   className={styles.progress__bar}
                   style={{
-                    width: `${value}%`,
-                    left: align === "right" ? `${100 - value}%` : 0,
+                    width: `${progress}%`,
+                    left: align === "right" ? `${100 - progress}%` : 0,
                     backgroundColor:
                       gender === "Female"
                         ? "var(--secondary)"
@@ -88,8 +96,8 @@ const ProgressRate = (props: ProgressProps) => {
                 <span
                   className={styles.progress__bar}
                   style={{
-                    width: `${value}%`,
-                    left: align === "right" ? `${100 - value}%` : 0,
+                    width: `${progress}%`,
+                    left: align === "right" ? `${100 - progress}%` : 0,
                     backgroundColor: "var(--primary)",
                   }}
                 />

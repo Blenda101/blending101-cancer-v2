@@ -10,8 +10,8 @@ const useCancerPerYear = () => {
     variables: {
       dataSet: category,
       race: filters.race || "All Races",
-      maleDisease: filters.disease.Male || "All Cancers",
-      femaleDisease: filters.disease.Female || "All Cancers",
+      maleDisease: filters.disease.Male || "All Cancer",
+      femaleDisease: filters.disease.Female || "All Cancer",
       state: filters.state,
     },
   });

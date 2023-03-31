@@ -50,7 +50,7 @@ const Figure = (props: FemaleCancerProps) => {
         <Type
           gender="Female"
           active="Breast"
-          caption="Cervix Uteri"
+          caption="Cervix"
           image="Liver.png"
           value={diseases.Cervix}
           style={styles.Cervix}

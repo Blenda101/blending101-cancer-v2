@@ -53,6 +53,7 @@ const DesktopRate = ({ diseases, category }) => (
           value={disease.rate}
           label={disease.type}
           population={disease.population}
+          maxValue={diseases?.female[0]?.rate || 0}
           align="right"
           gender="Female"
         />
@@ -85,6 +86,7 @@ const DesktopRate = ({ diseases, category }) => (
         <ProgressRate
           key={disease.type}
           value={disease.rate}
+          maxValue={diseases?.male[0]?.rate || 0}
           population={disease.population}
           label={disease.type}
           align="left"
@@ -102,6 +104,7 @@ const MobileRate = ({ diseases, category }) => {
           <ProgressRate
             key={disease.type}
             value={disease.rate}
+            maxValue={diseases?.female[0]?.rate || 0}
             population={disease.population}
             label={disease.type}
             align="right"
@@ -136,6 +139,7 @@ const MobileRate = ({ diseases, category }) => {
           <ProgressRate
             key={disease.type}
             value={disease.rate}
+            maxValue={diseases?.male[0]?.rate || 0}
             population={disease.population}
             label={disease.type}
             align="left"

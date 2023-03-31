@@ -67,13 +67,8 @@ const Header = () => {
                     ? "img/banner_incidence.svg"
                     : "img/banner_img.png"
                 }
-                className="img-fluid banner_img"
+                className={`img-fluid banner_img ${category}`}
                 alt="banner_img"
-                style={
-                  category === "Incidence"
-                    ? { paddingTop: "0rem", paddingBottom: "8rem" }
-                    : { paddingTop: "5rem" }
-                }
               />
             </div>
           </div>

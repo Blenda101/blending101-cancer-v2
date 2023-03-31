@@ -104,6 +104,7 @@ const Graph = (props: GraphProps) => {
 const CustomTooltip = (props: any) => {
   const { active, payload, label, gender } = props;
   const filters = useFilters();
+  console.log(payload);
 
   if (active && payload && payload.length) {
     let appliedFilters: string[] = [];
@@ -116,7 +117,7 @@ const CustomTooltip = (props: any) => {
           {label} <span>{appliedFilters?.join(", ")}</span>
         </p>
         <h6 className={gender === "Female" ? "value__female" : "value__male"}>
-          {Math.round(payload[0].value)}%
+          {Math.round(payload[0]?.payload?.weightedAverage)}
         </h6>
       </div>
     );

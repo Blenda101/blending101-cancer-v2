@@ -132,3 +132,28 @@ export const GET_FILTERS = gql`
     }
   }
 `;
+
+export const GET_ALL_RATES = gql`
+  query GetAllCancerRates(
+    $dataSet: String
+    $state: String
+    $race: String
+    $year: String
+  ) {
+    getAllCancerRate: getallCancerProportionMatrix(
+      dataSet: $dataSet
+      race: $race
+      state: $state
+      year: $year
+    ) {
+      maleData {
+        weightedAverage
+        totalCount
+      }
+      femaleData {
+        weightedAverage
+        totalCount
+      }
+    }
+  }
+`;

@@ -15,7 +15,7 @@ const Progress = (props: ProgressProps) => {
   const { caption, align, gender, ext } = props;
   const value = props?.value?.rate || 0;
   const proportion = props?.value?.count || 0;
-  console.log(proportion);
+  const progress = props?.value?.progress || 0;
   return (
     <Tippy
       content={
@@ -38,7 +38,7 @@ const Progress = (props: ProgressProps) => {
           <span
             className={styles.stacked__bar}
             style={{
-              width: value > 100 ? "100%" : `${value}%`,
+              width: `${progress}%`,
               [align]: 0,
               backgroundColor:
                 gender === "Female" ? "var(--secondary)" : "var(--primary)",
