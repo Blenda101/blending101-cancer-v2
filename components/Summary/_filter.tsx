@@ -115,7 +115,7 @@ export default Filter;
 const DEFAULT_DROPDOWN = {
   disease: {
     title: "All Cancers",
-    icon: "disease.svg",
+    icon: "Cancers.svg",
   },
   race: {
     title: "All Races",
