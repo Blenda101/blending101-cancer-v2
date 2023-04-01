@@ -24,6 +24,8 @@ const Progress = (props: ProgressProps) => {
           value={value || 0}
           population={proportion}
           gender={gender}
+          showDisease
+          showRace={false}
         />
       }
       placement="bottom"

@@ -40,7 +40,6 @@ const Tooltip = (props: TooltipProps) => {
             ? parseFloat(value)?.toFixed(1)
             : value.toFixed(1)
           : 0}
-        {isDeath ? "" : "%"}
       </h6>
     </div>
   );
@@ -51,6 +50,8 @@ interface CancerTypeTooltipProps {
   value?: string | number;
   population?: string;
   gender?: IGender;
+  showDisease?: boolean;
+  showRace?: boolean;
 }
 
 export const WaffleTooltip = (props: CancerTypeTooltipProps) => {
@@ -60,7 +61,6 @@ export const WaffleTooltip = (props: CancerTypeTooltipProps) => {
   filters?.year && appliedFilters.push(filters?.year);
   filters?.race && appliedFilters.push(filters?.race);
   filters?.state && appliedFilters.push(filters?.state);
-
   return (
     <div id="tooltip" className={styles.tooltip} style={{ minWidth: 150 }}>
       <p id="tooltip-title" className={styles.header}>
@@ -81,12 +81,21 @@ export const WaffleTooltip = (props: CancerTypeTooltipProps) => {
 };
 
 export const CancerTypeTooltip = (props: CancerTypeTooltipProps) => {
-  const { title, value, population, gender } = props;
+  const { title, value, population, gender, showDisease, showRace } = props;
   const filters = useFilters();
 
   let appliedFilters: string[] = [];
+
+  // YEAR
   filters?.year && appliedFilters.push(filters?.year);
-  filters?.race && appliedFilters.push(filters?.race);
+  // DISEASE
+  showDisease &&
+    gender &&
+    filters.disease[gender] &&
+    appliedFilters.push(filters.disease[gender]);
+  // RACE
+  showRace && filters?.race && appliedFilters.push(filters?.race);
+  // STATE
   filters?.state && appliedFilters.push(filters?.state);
 
   return (

@@ -46,6 +46,7 @@ const ProgressRate = (props: ProgressProps) => {
           value={value || 0}
           population={population}
           gender={gender}
+          showRace
         />
       }
       placement="bottom"

@@ -96,7 +96,7 @@ const City = (props: StateProps) => {
       content={
         <Tooltip
           title={maps ? maps[id]?.fullForm || STATE_FULL_FORM[id] : ""}
-          value={maps ? maps[id]?.percentage : 0}
+          value={maps ? maps[id]?.weightedAverage : 0}
           dot={maps && maps[id]?.fullForm ? color : "#fff"}
           gender={gender}
         />

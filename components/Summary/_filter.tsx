@@ -21,12 +21,28 @@ const Filter = (props: FilterProps) => {
   const category = useCategory();
 
   const getImageSrc = useCallback(
-    (type, item) => {
-      if (type === "disease")
+    (type: keyof typeof DEFAULT_DROPDOWN, item, defaultIcon?: string) => {
+      // THIS IF ELSE BLOCK IS FOR DEFAULT ICON ONLY
+      if (defaultIcon && type !== "disease") {
+        return `/icons/${active === "" ? "black" : "gray"}/${defaultIcon}`;
+      } else if (defaultIcon && type === "disease") {
+        return active === ""
+          ? `/icons/${gender === "Female" ? "orange" : "green"}/${defaultIcon}`
+          : `/icons/black/${defaultIcon}`;
+      }
+
+      // THIS IF ELSE BLOCK IS FOR OTHER ICONS
+      if (type === "disease") {
         return item === active
           ? `/icons/${gender === "Female" ? "orange" : "green"}/${item}.svg`
-          : `/icons/black/${item}.svg`;
-      else return `img/${items[item]}`;
+          : `/icons/black/${defaultIcon || item}.svg`;
+      } else if (type === "race") {
+        return `img/${items[item]}`;
+      } else if (type === "year") {
+        return `/icons/${item === active ? "black" : "gray"}/${items[item]}`;
+      } else if (type === "state") {
+        return `/icons/${item === active ? "black" : "gray"}/${items[item]}`;
+      }
     },
     [active, gender, items],
   );
@@ -54,7 +70,7 @@ const Filter = (props: FilterProps) => {
         ) : (
           <Fragment>
             <img
-              src={DEFAULT_DROPDOWN[type].icon}
+              src={getImageSrc(type, "", DEFAULT_DROPDOWN[type].icon)}
               className="img-fluid"
               alt={DEFAULT_DROPDOWN[type].title}
             />
@@ -63,11 +79,12 @@ const Filter = (props: FilterProps) => {
         )}
       </button>
       <ul className={`dropdown-menu ${show ? "show" : ""}`}>
-        {(type === "disease" || type === "race") && (
+        {/* ALL LIST OPTION */}
+        {type !== "year" && (
           <li onClick={() => onChange("")}>
             <a className="dropdown-item">
               <img
-                src={DEFAULT_DROPDOWN[type].icon}
+                src={getImageSrc(type, active, DEFAULT_DROPDOWN[type].icon)}
                 className="img-fluid"
                 alt={DEFAULT_DROPDOWN[type].title}
               />
@@ -98,22 +115,22 @@ export default Filter;
 const DEFAULT_DROPDOWN = {
   disease: {
     title: "All Cancers",
-    icon: "/img/disease.svg",
+    icon: "disease.svg",
   },
   race: {
     title: "All Races",
-    icon: "/img/race.svg",
+    icon: "race.svg",
   },
   age: {
     title: "All Ages",
-    icon: "/img/counter.svg",
+    icon: "counter.svg",
   },
   state: {
     title: "All States",
-    icon: "/img/location.svg",
+    icon: "location.svg",
   },
   year: {
     title: "All Years",
-    icon: "/img/calender.svg",
+    icon: "calender.svg",
   },
 };
