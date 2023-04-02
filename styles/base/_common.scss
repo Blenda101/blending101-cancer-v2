@@ -18,7 +18,7 @@
 }
 
 section {
-  padding: 6.25rem 0;
+  padding: 3rem 0 6.25rem;
   @include respond(phone) {
     //767px
     padding: 4.25rem 0;

@@ -10,7 +10,9 @@ const Range = (props: RangeProps) => {
   return (
     <div className={styles.range}>
       <div className={styles.wrapper}>
-        <h5>Incidence (Rate in 100,000 )</h5>
+        <h5>
+          Incidence <span>(Rate in 100,000&#42;)</span>
+        </h5>
         <div
           className={`${styles.stacked} ${
             version === "female" ? styles.female : styles.male

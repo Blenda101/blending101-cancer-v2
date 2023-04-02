@@ -18,10 +18,8 @@ const Tooltip = (props: TooltipProps) => {
 
   let appliedFilters: string[] = [];
   filters?.year && appliedFilters.push(filters?.year);
-  gender &&
-    filters?.disease[gender] &&
-    appliedFilters.push(filters?.disease[gender]);
-  filters?.race && appliedFilters.push(filters?.race);
+  gender && appliedFilters.push(filters?.disease[gender] || "All Cancers");
+  appliedFilters.push(filters?.race || "All Races");
 
   return (
     <div id="tooltip" className={styles.tooltip}>
@@ -91,12 +89,11 @@ export const CancerTypeTooltip = (props: CancerTypeTooltipProps) => {
   // DISEASE
   showDisease &&
     gender &&
-    filters.disease[gender] &&
-    appliedFilters.push(filters.disease[gender]);
+    appliedFilters.push(filters.disease[gender] || "All Cancers");
   // RACE
-  showRace && filters?.race && appliedFilters.push(filters?.race);
+  showRace && appliedFilters.push(filters?.race || "All Races");
   // STATE
-  filters?.state && appliedFilters.push(filters?.state);
+  appliedFilters.push(filters?.state || "All States");
 
   return (
     <div id="tooltip" className={styles.cancer_tooltip}>
