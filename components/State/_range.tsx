@@ -3,10 +3,10 @@ import styles from "./index.module.scss";
 
 interface RangeProps {
   version: "male" | "female";
-  states: any;
+  quartiles: any;
 }
 const Range = (props: RangeProps) => {
-  const { version, states } = props;
+  const { version, quartiles } = props;
   return (
     <div className={styles.range}>
       <div className={styles.wrapper}>
@@ -23,29 +23,29 @@ const Range = (props: RangeProps) => {
               className={`${styles.stacked__total} ${styles.stacked__total__initial}`}
             >
               <i>&nbsp;</i>
-              {states?.quartile ? Math.round(states?.quartile[0]) : 0}
+              {quartiles ? Math.round(quartiles[0]) : 0}
             </span>
             <span className={styles.stacked__total}>
               <i>&nbsp;</i>
-              {states?.quartile ? Math.round(states?.quartile[25]) : 0}
+              {quartiles ? Math.round(quartiles[25]) : 0}
             </span>
           </div>
           <div id="quality">
             <span className={styles.stacked__total}>
               <i>&nbsp;</i>
-              {states?.quartile ? Math.round(states?.quartile[50]) : 0}
+              {quartiles ? Math.round(quartiles[50]) : 0}
             </span>
           </div>
           <div id="quantity">
             <span className={styles.stacked__total}>
               <i>&nbsp;</i>
-              {states?.quartile ? Math.round(states?.quartile[75]) : 0}
+              {quartiles ? Math.round(quartiles[75]) : 0}
             </span>
           </div>
           <div id="quantity">
             <span className={styles.stacked__total}>
               <i>&nbsp;</i>
-              {states?.quartile ? Math.round(states?.quartile[100]) : 0}
+              {quartiles ? Math.round(quartiles[100]) : 0}
             </span>
           </div>
         </div>

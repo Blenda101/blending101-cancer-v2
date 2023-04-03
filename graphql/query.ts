@@ -47,12 +47,12 @@ export const GET_YEARWISE_CANCER = gql`
       race: $race
     ) {
       maleData {
-        _id
+        year: _id
         weightedAverage
         percentage
       }
       femaleData {
-        _id
+        year: _id
         weightedAverage
         percentage
       }

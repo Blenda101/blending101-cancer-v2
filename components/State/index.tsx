@@ -20,11 +20,11 @@ const State = () => {
             <div className="shadow_box">
               <SwipeWrapper>
                 <SwiperSlide>
-                  <Range version="female" states={state?.female?.quartile} />
+                  <Range version="female" quartiles={state?.female?.quartile} />
                   <Map gender="Female" dictionary={state?.female?.data} />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <Range version="male" states={state?.male?.quartile} />
+                  <Range version="male" quartiles={state?.male?.quartile} />
                   <Map gender="Male" dictionary={state?.male?.data} />
                 </SwiperSlide>
               </SwipeWrapper>

@@ -6,6 +6,28 @@ const Footer = () => {
     <footer>
       <div className="container">
         <div className="row">
+          <div className="col-12">
+            <div className="citation">
+              <div className="citation__top" />
+              <div className="citation__right" />
+              U.S. Cancer Statistics Working Group. U.S. Cancer Statistics Data
+              Visualizations Tool, based on 2021 submission data (1999–2019):
+              U.S. Department of Health and Human Services, Centers for Disease
+              Control and Prevention and National Cancer Institute;
+              www.cdc.gov/cancer/dataviz, released in November 2022.
+              <div className="citation__bottom" />
+              <div className="citation__left" />
+            </div>
+          </div>
+          <ol className="citation__info">
+            <li>
+              Rates are the number of cases (or deaths) per 100,000 people and
+              are age-adjusted to the 2000 U.S. standard population (19 age
+              groups – Census P25–1130).
+            </li>
+          </ol>
+        </div>
+        <div className="row">
           <div className="col-12 text-center">
             <div className="footer-logo">
               <img src="img/poliy_logo.svg" className="img-fluid" alt=" " />

@@ -11,6 +11,7 @@ interface GraphProps {
 const Graph = (props: GraphProps) => {
   const { version } = props;
   const cancer = useCancerPerYear();
+  console.log(cancer);
   return (
     <div className="graph">
       <ResponsiveContainer
@@ -85,7 +86,7 @@ const Graph = (props: GraphProps) => {
             wrapperStyle={{ outline: "none" }}
             content={<CustomTooltip gender={version} />}
           />
-          <XAxis dataKey="_id" hide />
+          <XAxis dataKey="year" hide />
           <Area
             type="monotone"
             dataKey="percentage"
