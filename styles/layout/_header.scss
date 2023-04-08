@@ -1,10 +1,23 @@
-.banner_sec {
+#Incidence.banner_sec {
   background: linear-gradient(
     180deg,
     #ffffff 0%,
     #dffdbf 75.11%,
     var(--header) 100%
   );
+}
+#Death.banner_sec {
+  background: linear-gradient(
+    115.35deg,
+    #fff 20.25%,
+    #edc2ae 81.23%,
+    #fff 100%
+  );
+  margin-bottom: -1.1rem;
+  padding: 3rem 0 0rem !important;
+}
+
+.banner_sec {
   position: relative;
   z-index: 2;
   .btn_bg {
@@ -181,13 +194,29 @@
   }
   .green_virus {
     position: absolute;
-    bottom: 44%;
-    right: 0;
+    top: 25%;
+    left: 22%;
     z-index: -1;
+    @include respond(1260px) {
+      left: 18%;
+    }
     @include respond(tab-land) {
       //1200px
       width: 14rem;
     }
+    @include respond(1100px) {
+      top: 28%;
+      left: 15%;
+    }
+    @include respond(1000px) {
+      width: 12rem;
+      top: 23%;
+      left: 10%;
+    }
+    @include respond(850px) {
+      left: 5%;
+    }
+
     @include respond(phone) {
       //768px
       display: none;
@@ -195,13 +224,29 @@
   }
   .red_virus {
     position: absolute;
-    bottom: 35%;
-    left: 37%;
-    transform: translate(-50%, -50%);
+    top: 23%;
+    right: 29%;
+    @include respond(1600px) {
+      right: 25%;
+      top: 25%;
+    }
+    @include respond(1260px) {
+      right: 20%;
+      top: 29%;
+    }
     @include respond(tab-land) {
       //1200px
       width: 18rem;
     }
+    @include respond(1000px) {
+      width: 14rem;
+      right: 20%;
+      top: 35%;
+    }
+    @include respond(900px) {
+      top: 40%;
+    }
+
     @include respond(phone) {
       //768px
       display: none;

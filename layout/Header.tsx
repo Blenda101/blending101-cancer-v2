@@ -11,7 +11,7 @@ const Header = () => {
   const { onIncidence, onDeath } = useCategoryToggler();
   return (
     <header>
-      <section className="banner_sec">
+      <section id={category} className="banner_sec">
         <div className="container">
           <div className="row">
             <div className="col-12 text-center">
@@ -61,15 +61,13 @@ const Header = () => {
                 Cancer Interactive <br />
                 <span>Data Story</span>
               </h1>
-              <img
-                src={
-                  category === "Incidence"
-                    ? "img/banner_incidence.svg"
-                    : "img/banner_img.png"
-                }
-                className={`img-fluid banner_img ${category}`}
-                alt="banner_img"
-              />
+              {category === "Incidence" && (
+                <img
+                  src="img/banner_incidence.svg"
+                  className={`img-fluid banner_img ${category}`}
+                  alt="banner_img"
+                />
+              )}
             </div>
           </div>
         </div>
@@ -81,9 +79,14 @@ const Header = () => {
               alt="banner_red_virus"
             />
             <img
-              src="img/banner_green.png"
+              src="img/banner_green_virus.png"
               className="img-fluid green_virus"
               alt="banner_green_virus"
+            />
+            <img
+              src="img/Graveyard.png"
+              alt="banner_img"
+              style={{ width: "100%" }}
             />
           </>
         )}

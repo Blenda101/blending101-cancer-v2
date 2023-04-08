@@ -84,7 +84,7 @@ const Summary = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="box_gray">
+            <div id={category} className="box_gray">
               <SwipeWrapper
                 breakpoints={{
                   300: {
