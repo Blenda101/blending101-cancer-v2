@@ -1,7 +1,7 @@
 import { ApolloClient, gql, InMemoryCache } from "@apollo/client";
 import { filtersVar } from "./store";
 
-const API_URL = "https://inforepo-production.up.railway.app/graphql";
+const API_URL = "https://infographic-production.up.railway.app/graphql";
 
 const cache: InMemoryCache = new InMemoryCache({
   typePolicies: {
